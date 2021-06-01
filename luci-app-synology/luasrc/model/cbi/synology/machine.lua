@@ -53,5 +53,44 @@ o.rmempty = false
 o.description = translate("此处端口是主机和虚拟机沟通用的，比如发送关机命令，黑群晖需要安装关机插件")
 
 
+o = s:option(Button, "create", translate("开机"))
+o.inputstyle = "apply"
+o.description = translate("开机")
+o.write = function(self,section)
+	luci.sys.call("/etc/init.d/synology start")
+	luci.http.redirect(luci.dispatcher.build_url("admin", "services", "synology", "machine"))
+end
+
+
+o = s:option(Button, "stop", translate("关机"))
+o.inputstyle = "apply"
+o.description = translate("关机")
+o.write = function(self,section)
+	luci.sys.call("/etc/init.d/synology stop")
+	luci.http.redirect(luci.dispatcher.build_url("admin", "services", "synology", "machine"))
+end
+
+
+o = s:option(Button, "enable", translate("开机启动"))
+o.inputstyle = "apply"
+o.description = translate("开机启动")
+o.write = function(self,section)
+	luci.sys.call("/etc/init.d/synology enable")
+	luci.http.redirect(luci.dispatcher.build_url("admin", "services", "synology", "machine"))
+end
+
+o = s:option(Button, "forceStop", translate("强制关机"))
+o.inputstyle = "apply"
+o.description = translate("强制关机")
+o.write = function(self,section)
+	luci.sys.call("/etc/init.d/synology forceStop")
+	luci.http.redirect(luci.dispatcher.build_url("admin", "services", "synology", "machine"))
+end
+
+
+
+
+
+
 
 return m
