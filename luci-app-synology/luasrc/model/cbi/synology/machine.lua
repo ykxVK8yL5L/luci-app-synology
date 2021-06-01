@@ -65,6 +65,7 @@ end
 o = s:option(Button, "stop", translate("关机"))
 o.inputstyle = "apply"
 o.description = translate("关机")
+o.description = translate("黑群机需要安装关机插件，否则正常关机是关不掉的需要强制关机")
 o.write = function(self,section)
 	luci.sys.call("/etc/init.d/synology stop")
 	luci.http.redirect(luci.dispatcher.build_url("admin", "services", "synology", "machine"))
