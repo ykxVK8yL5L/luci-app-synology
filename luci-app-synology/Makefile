@@ -15,7 +15,7 @@ include $(TOPDIR)/feeds/luci/luci.mk
 
 define Package/luci-app-synology/postinst
 #!/bin.sh
-chmod 755 /etc/init.d/luci-app-synology
+chmod 755 /etc/init.d/synology
 exit 0
 endef
 
