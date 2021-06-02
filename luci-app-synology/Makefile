@@ -13,6 +13,11 @@ LUCI_DEPENDS:=+kmod-tun +qemu-bridge-helper +qemu-x86_64-softmmu +kmod-kvm-intel
 
 include $(TOPDIR)/feeds/luci/luci.mk
 
+define Package/luci-app-synology/postinst
+#!/bin.sh
+chmod 755 /etc/init.d/luci-app-synology
+exit 0
+endef
 
 
 # call BuildPackage - OpenWrt buildroot signature
