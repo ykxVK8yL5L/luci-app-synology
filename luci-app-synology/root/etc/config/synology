@@ -1,2 +1,5 @@
 config machine
-config images
+               
+config images 
+        option path '/root/test.qcow2'
+        option size '2'
