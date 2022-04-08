@@ -34,7 +34,7 @@ start() {
  		shda="-hda $hda "
 	fi
 	if [ -n "$hdb" ]; then
- 		shda="-hdb $hdb "
+ 		shdb="-hdb $hdb "
 	fi
 	if [ -n "$hdc" ]; then
  		shda="-hdc $hdc "
