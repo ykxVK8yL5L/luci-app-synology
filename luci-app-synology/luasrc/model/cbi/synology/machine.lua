@@ -40,6 +40,10 @@ o = s:option(Value, "hdd", translate("HDD【硬盘4】:"))
 o.default = ""
 o.rmempty = true
 
+o = s:option(Value, "other", translate("其它参数:"))
+o.default = ""
+o.rmempty = true
+
 o = s:option(Value, "vnc", translate("VNC端口:"))
 o.datatype = "uinteger"
 o.default = "1"
