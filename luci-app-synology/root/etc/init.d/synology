@@ -30,6 +30,7 @@ start() {
 	hdb=$(config_t_get machine hdb)
 	hdc=$(config_t_get machine hdc)
 	hdd=$(config_t_get machine hdd)
+	other=$(config_t_get machine other)
 	if [ -n "$hda" ]; then
  		shda="-hda $hda "
 	fi
@@ -42,7 +43,11 @@ start() {
 	if [ -n "$hdd" ]; then
  		shda="-hdd $hdd "
 	fi
-	hardisk=$shda$shdb$shdc$shdd
+	if [ -n "$other" ]; then
+ 		sother="$other "
+	fi
+	
+	hardisk=$shda$shdb$shdc$shdd$sother
 	cmd="qemu-system-x86_64 -name synology -enable-kvm -cpu $cpu -m ${m}G -smp $smp -vnc :$vnc \
 	$hardisk -device e1000,netdev=br0 -netdev bridge,br=br-lan,id=br0 -qmp tcp:127.0.0.1:$qmp,server,nowait -daemonize"
 	exec $cmd
