@@ -37,7 +37,7 @@ jobs:
         - name: Build Package
           run: |
             echo "src-link synology $GITHUB_WORKSPACE/openwrt" > openwrt-sdk/feeds.conf
-            CONFIG_PACKAGE_luci-app-synology=y
+            echo 'CONFIG_PACKAGE_luci-app-synology=y
             ' >> openwrt-sdk/.config
             cd openwrt-sdk
             cat feeds.conf.default >> feeds.conf
