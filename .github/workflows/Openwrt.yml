@@ -36,7 +36,7 @@ jobs:
             mv -f openwrt-sdk-* openwrt-sdk
         - name: Build Package
           run: |
-            echo "src-link synology $GITHUB_WORKSPACE/openwrt" > openwrt-sdk/feeds.conf
+            echo "src-link synology $GITHUB_WORKSPACE/" > openwrt-sdk/feeds.conf
             echo 'CONFIG_PACKAGE_luci-app-synology=y
             ' >> openwrt-sdk/.config
             cd openwrt-sdk
