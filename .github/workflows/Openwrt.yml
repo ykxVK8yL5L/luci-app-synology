@@ -51,7 +51,7 @@ jobs:
           uses: actions/upload-artifact@v2
           if: ${{ matrix.target.arch == 'aarch64_generic' }}
           with:
-            name: pikpak-webdav-openwrt-${{ matrix.target.arch }}
+            name: luci-app-synology-openwrt-${{ matrix.target.arch }}
             path: openwrt-sdk/bin/packages/*/synology/luci-*.ipk
             if-no-files-found: error
         - name: Upload luci packages to GitHub Release
