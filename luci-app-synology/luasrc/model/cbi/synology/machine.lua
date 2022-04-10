@@ -9,8 +9,8 @@ s.anonymous = true
 
 
 o = s:option(Value, "cpu", translate("CPU:"))
-o.description = translate("默认调用本机如对参数了解可自定义，建议:core2duo.亲测成功")
-o.default = "core2duo"
+o.description = translate("默认调用本机如对参数了解可自定义，建议:Haswell.亲测成功")
+o.default = "Haswell"
 o.rmempty = false
 
 o = s:option(Value, "m", translate("内存【单位G】:"))
@@ -25,7 +25,7 @@ o.rmempty = false
 
 o = s:option(Value, "hda", translate("HDA【硬盘1】:"))
 o.default = ""
-o.rmempty = false
+o.rmempty = true
 o.description = translate("具体虚拟镜像文件或/dev/sda等")
 
 o = s:option(Value, "hdb", translate("HDB【硬盘2】:"))
