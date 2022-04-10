@@ -49,10 +49,10 @@ jobs:
             tree bin/packages/
         - name: Archive luci packages
           uses: actions/upload-artifact@v2
-          if: ${{ matrix.target.arch == 'aarch64_generic' }}
+          if: ${{ matrix.target.arch == 'x86_64' }}
           with:
             name: luci-app-synology-openwrt-${{ matrix.target.arch }}
-            path: openwrt-sdk/bin/packages/*/synology/luci-*.ipk
+            path: openwrt-sdk/bin/packages/*/synology/luci-app-synology*.ipk
             if-no-files-found: error
         - name: Upload luci packages to GitHub Release
           uses: svenstaro/upload-release-action@v2
