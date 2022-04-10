@@ -53,7 +53,7 @@ start() {
 	exec $cmd
 	sleep 1
 	qemu_pid=$(/usr/bin/pgrep -f 'qemu-system-x86_64 -name synology')
-	#/usr/bin/pgrep qemu-system-x86_64 > $qemu_pidfile
+	/usr/bin/pgrep qemu-system-x86_64 > $qemu_pidfile
 	echo "QEMU: Started VM with PID $qemu_pid."
 }
 
