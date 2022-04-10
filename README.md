@@ -8,5 +8,5 @@ openwrt上黑群晖的配置界面
 wget https://github.com/ykxVK8yL5L/luci-app-synology/releases/download/v0.0.1/luci-app-synology_git-22.100.18696-116e6fb_all.ipk
 opkg install luci-app-synology_git-22.100.18696-116e6fb_all.ipk
 ```
-
+## 黑群晖7.1视频演示:<https://youtu.be/Ueex9PRB3zg>
 ## 黑群晖6.17视频演示:<https://youtu.be/qSxtZwxPGUc>
