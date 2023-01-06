@@ -8,7 +8,7 @@
 include $(TOPDIR)/rules.mk
 
 LUCI_TITLE:=luci-app-Synology
-LUCI_DEPENDS:=+kmod-tun +qemu-bridge-helper +qemu-x86_64-softmmu +kmod-kvm-intel+qemu-img+qemu-nbd
+LUCI_DEPENDS:=+kmod-tun +qemu-bridge-helper +qemu-x86_64-softmmu +kmod-kvm-intel +qemu-img +qemu-nbd
 
 
 include $(TOPDIR)/feeds/luci/luci.mk
