@@ -3,6 +3,9 @@
 openwrt上黑群晖的配置界面
 依赖qemu和kvm.目前ipk仅支持intel-kvm可以根据自己情况修改依赖项。
 
+# 如使用e1000e不可以的话请改用e1000
+
+
 # x86_64的安装代码:
 ```
 wget https://github.com/ykxVK8yL5L/luci-app-synology/releases/download/v0.0.1/luci-app-synology_git-23.006.29676-959a219_all.ipk
