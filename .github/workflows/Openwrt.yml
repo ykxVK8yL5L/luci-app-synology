@@ -18,7 +18,7 @@ jobs:
         matrix:
           target:
             - arch: "x86_64"
-              sdk: "https://downloads.openwrt.org/snapshots/targets/x86/64/openwrt-sdk-x86-64_gcc-11.3.0_musl.Linux-x86_64.tar.xz"
+              sdk: "https://downloads.openwrt.org/snapshots/targets/x86/64/openwrt-sdk-x86-64_gcc-12.3.0_musl.Linux-x86_64.tar.xz"
       steps:
         - uses: actions/checkout@v2
         - name: Install build requirements
