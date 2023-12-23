@@ -8,7 +8,7 @@ openwrt上黑群晖的配置界面
 
 # x86_64的安装代码:
 ```
-wget https://github.com/ykxVK8yL5L/luci-app-synology/releases/download/v0.0.1/luci-app-synology_git-23.006.29676-959a219_all.ipk
+wget https://github.com/ykxVK8yL5L/luci-app-synology/releases/download/v0.0.1/luci-app-synology_git-23.356.18063-b6728ba_all.ipk
 opkg install luci-app-synology_git-22.100.34822-fdcc7df_all.ipk
 ```
 ## 黑群晖7.1视频演示:<https://youtu.be/Ueex9PRB3zg>   
